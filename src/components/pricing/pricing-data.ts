@@ -1,11 +1,12 @@
 export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.realvs.ai";
 
 export const CREDIT_PACKS = [
-  { title: "Starter", price: "$10", credits: "1100 credits", popular: false, bestValue: false },
-  { title: "Basic", price: "$15", credits: "1700 credits", popular: false, bestValue: false },
-  { title: "Standard", price: "$20", credits: "2300 credits", popular: true, bestValue: false },
-  { title: "Pro", price: "$30", credits: "3500 credits", popular: false, bestValue: false },
-  { title: "Elite", price: "$50", credits: "6000 credits", popular: false, bestValue: true },
+  { title: "Nano", price: "$5", credits: "200 credits", popular: false, bestValue: false },
+  { title: "Starter", price: "$10", credits: "500 credits", popular: false, bestValue: false },
+  { title: "Basic", price: "$15", credits: "800 credits", popular: false, bestValue: false },
+  { title: "Standard", price: "$20", credits: "1100 credits", popular: true, bestValue: false },
+  { title: "Pro", price: "$30", credits: "1700 credits", popular: false, bestValue: false },
+  { title: "Elite", price: "$50", credits: "3000 credits", popular: false, bestValue: true },
 ] as const;
 
 export const PRICING_LAYERS = [
@@ -15,8 +16,9 @@ export const PRICING_LAYERS = [
     price: "$0",
     description: "Best for first-time users who want to test the detector before committing. A card is required to activate the trial.",
     features: [
-      "Limited starter access",
-      "Try image, audio, and video flows",
+      "500 trial credits",
+      "Try image, audio, and video scans",
+      "Deep video included during trial",
       "Card required to activate trial",
     ],
     ctaLabel: "Start Free Trial",
@@ -81,39 +83,87 @@ export const HOW_IT_WORKS_STEPS = [
   { title: "3. Continue with credits or plan", text: "Top up with credits or choose a monthly plan for regular use." },
 ] as const;
 
-export const SCAN_COSTS = [
-  { label: "Image", cost: "$0.05" },
-  { label: "Audio", cost: "$0.40" },
-  { label: "Video ≤15 sec", cost: "$0.99" },
-  { label: "Video ≤30 sec", cost: "$1.99" },
-  { label: "Video ≤60 sec", cost: "$2.99" },
+// Subscriber rates — applies to trial, Basic, and Pro users
+export const SCAN_COSTS_SUBSCRIBER = [
+  { label: "Image", cost: "2 cr ($0.02)" },
+  { label: "Audio", cost: "40 cr ($0.40)" },
+  { label: "Short video", cost: "30 cr ($0.30)" },
+  { label: "Deep video", cost: "80 cr ($0.80)" },
+] as const;
+
+// Free user rates — applies to wallet-only users with no active subscription
+export const SCAN_COSTS_FREE = [
+  { label: "Image", cost: "5 cr ($0.05)" },
+  { label: "Audio", cost: "80 cr ($0.80)" },
+  { label: "Short video", cost: "60 cr ($0.60)" },
+  { label: "Deep video", cost: "Blocked" },
 ] as const;
 
 export const EARLY_ACCESS_PLANS = [
   {
     title: "Basic",
-    price: "$4.99 / month",
-    credits: "500 credits / month",
+    price: "$7.99 / month",
+    credits: "300 credits / month",
     features: [
-      "Image scans: 4 credits",
-      "Audio scans: 35 credits",
-      "Short video: 90 credits",
-      "Deep video: 240 credits",
-      "2 Deep Scans / month",
+      "Image scans: 2 credits",
+      "Audio scans: 40 credits",
+      "Short video: 30 credits",
+      "No deep video",
+      "10 scans / day",
+      "30 days scan history",
     ],
     highlight: false,
   },
   {
-    title: "Pro",
+    title: "Pro — Early Access",
     price: "$9.99 / month",
-    credits: "1200 credits / month",
+    credits: "700 credits / month",
     features: [
-      "Image scans: 3 credits",
-      "Audio scans: 30 credits",
-      "Short video: 80 credits",
-      "Deep video: 230 credits",
-      "4 Deep Scans / month",
+      "Image scans: 2 credits",
+      "Audio scans: 40 credits",
+      "Short video: 30 credits",
+      "Deep video: 80 credits",
+      "15 deep scans / month",
+      "Full result breakdown",
+      "Priority processing",
+      "Shareable result links",
+      "Credit rollover up to 50%",
     ],
     highlight: true,
+  },
+  {
+    title: "Pro — Loyalty",
+    price: "$12.99 / month",
+    credits: "600 credits / month",
+    features: [
+      "Image scans: 2 credits",
+      "Audio scans: 40 credits",
+      "Short video: 30 credits",
+      "Deep video: 80 credits",
+      "15 deep scans / month",
+      "Early access to new scan types",
+      "Full result breakdown",
+      "Priority processing",
+      "Shareable result links",
+      "Credit rollover up to 50%",
+    ],
+    highlight: false,
+  },
+  {
+    title: "Pro — Normal",
+    price: "$14.99 / month",
+    credits: "500 credits / month",
+    features: [
+      "Image scans: 2 credits",
+      "Audio scans: 40 credits",
+      "Short video: 30 credits",
+      "Deep video: 80 credits",
+      "25 deep scans / month",
+      "Full result breakdown",
+      "Priority processing",
+      "Shareable result links",
+      "Credit rollover up to 50%",
+    ],
+    highlight: false,
   },
 ] as const;

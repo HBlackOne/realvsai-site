@@ -5,7 +5,8 @@ import {
   PRICING_CREDIT_PACK_FEATURES,
   PRICING_PAYG_FEATURES,
   PRICING_PREMIUM_FEATURES,
-  SCAN_COSTS,
+  SCAN_COSTS_FREE,
+  SCAN_COSTS_SUBSCRIBER,
 } from "@/components/pricing/pricing-data";
 import {
   CreditPacksGrid,
@@ -84,11 +85,27 @@ export default function PricingPage() {
           <p className="mt-2 text-sm text-text-muted">Each scan is charged clearly from your balance after trial.</p>
         </div>
 
-        <div className="mt-6 grid grid-cols-3 gap-3">
-          {SCAN_COSTS.map((item) => (
-            <PricingCostCard key={item.label} label={item.label} cost={item.cost} />
-          ))}
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          <div className="space-y-2">
+            <p className="text-xs font-medium text-text-muted">Subscriber rates</p>
+            <div className="grid gap-2">
+              {SCAN_COSTS_SUBSCRIBER.map((item) => (
+                <PricingCostCard key={item.label} label={item.label} cost={item.cost} />
+              ))}
+            </div>
+          </div>
+          <div className="space-y-2">
+            <p className="text-xs font-medium text-text-muted">Wallet only (no subscription)</p>
+            <div className="grid gap-2">
+              {SCAN_COSTS_FREE.map((item) => (
+                <PricingCostCard key={item.label} label={item.label} cost={item.cost} />
+              ))}
+            </div>
+          </div>
         </div>
+        <p className="mt-3 text-center text-xs text-text-muted">
+          Subscribe for lower rates — wallet-only users pay more per scan.
+        </p>
       </section>
 
       <section id="credit-packs" className="mt-12">
