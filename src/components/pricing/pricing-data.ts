@@ -22,7 +22,7 @@ export const PRICING_LAYERS = [
       "Card required to activate trial",
     ],
     ctaLabel: "Start Free Trial",
-    ctaHref: "https://accounts.realvs.ai/sign-up",
+    ctaHref: `${APP_URL}/welcome`,
   },
   {
     title: "Credit Packs",
@@ -35,7 +35,7 @@ export const PRICING_LAYERS = [
       "Use credits across supported scan types",
     ],
     ctaLabel: "View Credit Packs",
-    ctaHref: `${APP_URL}/credits`,
+    ctaHref: `${APP_URL}/welcome`,
   },
   {
     title: "Early Access Plans",
@@ -48,7 +48,7 @@ export const PRICING_LAYERS = [
       "Built for ongoing usage",
     ],
     ctaLabel: "Compare Plans",
-    ctaHref: `${APP_URL}/subscription`,
+    ctaHref: `${APP_URL}/welcome`,
     highlight: true,
   },
 ] as const;
