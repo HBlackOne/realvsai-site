@@ -1,0 +1,29 @@
+{
+  "name": "realvsai-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start -p 3010",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "^16",
+    "react": "^19",
+    "react-dom": "^19",
+    "lucide-react": "^0.500",
+    "clsx": "^2",
+    "tailwind-merge": "^3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^16",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
