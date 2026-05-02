@@ -210,7 +210,7 @@ export function LandingHero() {
 
           <div className="hero-fade-up flex items-center gap-3 flex-wrap mb-7" style={{ animationDelay: "0.3s" }}>
             <a
-              href={`${APP_URL}/scan`}
+              href={`${APP_URL}/welcome`}
               className="hero-cta-glow inline-flex items-center gap-2 bg-primary text-bg font-semibold px-7 py-3.5 rounded-[15px] text-[15px] transition hover:-translate-y-0.5 hover:bg-primary-hover"
             >
               <ArrowRight className="w-4 h-4" />

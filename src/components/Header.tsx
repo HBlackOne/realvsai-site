@@ -59,7 +59,7 @@ export default function Header() {
           </a>
 
           <a
-            href={`${APP_URL}/scan`}
+            href={`${APP_URL}/welcome`}
             className="inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-bg transition hover:-translate-y-0.5 hover:bg-primary-hover"
           >
             <ArrowRight className="h-4 w-4" />

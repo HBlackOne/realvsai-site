@@ -148,7 +148,7 @@ export function CreditPacksGrid() {
       {CREDIT_PACKS.map((pack) => (
         <a
           key={pack.title}
-          href={`${APP_URL}/credits`}
+          href={`${APP_URL}/welcome`}
           className={`relative flex flex-col items-center rounded-[1.4rem] border p-4 text-center shadow-[0_14px_45px_rgba(0,0,0,0.12)] transition hover:-translate-y-1 hover:bg-surface2 ${
             pack.popular || pack.bestValue ? "border-primary/20 bg-primary/10" : "border-border bg-surface/92"
           }`}
@@ -197,7 +197,7 @@ export function EarlyAccessPlansGrid() {
       {EARLY_ACCESS_PLANS.map((plan) => (
         <a
           key={plan.title}
-          href={`${APP_URL}/subscription`}
+          href={`${APP_URL}/welcome`}
           className={`relative block rounded-[1.75rem] border p-5 shadow-[0_18px_60px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-1 sm:p-6 ${
             plan.highlight ? "border-primary/20 bg-[linear-gradient(180deg,rgba(138,180,248,0.12),rgba(138,180,248,0.04))]" : "border-border bg-surface/92"
           }`}

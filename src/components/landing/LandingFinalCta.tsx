@@ -25,7 +25,7 @@ export function LandingFinalCta() {
           </p>
           <div className="flex items-center justify-center">
             <a
-              href={`${APP_URL}/scan`}
+              href={`${APP_URL}/welcome`}
               className="inline-flex items-center gap-2 rounded-[15px] bg-primary px-7 py-3.5 text-[15px] font-semibold text-bg transition hover:-translate-y-0.5 hover:bg-primary-hover"
             >
               <ArrowRight className="w-4 h-4" />
