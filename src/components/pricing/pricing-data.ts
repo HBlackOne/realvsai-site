@@ -86,7 +86,7 @@ export const HOW_IT_WORKS_STEPS = [
 // Subscriber rates — applies to trial, Basic, and Pro users
 export const SCAN_COSTS_SUBSCRIBER = [
   { label: "Image", cost: "2 cr ($0.02)" },
-  { label: "Audio", cost: "40 cr ($0.40)" },
+  { label: "Audio", cost: "50 cr ($0.50)" },
   { label: "Short video", cost: "30 cr ($0.30)" },
   { label: "Deep video", cost: "80 cr ($0.80)" },
 ] as const;
@@ -106,7 +106,7 @@ export const EARLY_ACCESS_PLANS = [
     credits: "300 credits / month",
     features: [
       "Image scans: 2 credits",
-      "Audio scans: 40 credits",
+      "Audio scans: 50 credits",
       "Short video: 30 credits",
       "No deep video",
       "10 scans / day",
@@ -120,7 +120,7 @@ export const EARLY_ACCESS_PLANS = [
     credits: "700 credits / month",
     features: [
       "Image scans: 2 credits",
-      "Audio scans: 40 credits",
+      "Audio scans: 50 credits",
       "Short video: 30 credits",
       "Deep video: 80 credits",
       "15 deep scans / month",
@@ -137,7 +137,7 @@ export const EARLY_ACCESS_PLANS = [
     credits: "600 credits / month",
     features: [
       "Image scans: 2 credits",
-      "Audio scans: 40 credits",
+      "Audio scans: 50 credits",
       "Short video: 30 credits",
       "Deep video: 80 credits",
       "15 deep scans / month",
@@ -155,10 +155,10 @@ export const EARLY_ACCESS_PLANS = [
     credits: "500 credits / month",
     features: [
       "Image scans: 2 credits",
-      "Audio scans: 40 credits",
+      "Audio scans: 50 credits",
       "Short video: 30 credits",
       "Deep video: 80 credits",
-      "25 deep scans / month",
+      "15 deep scans / month",
       "Full result breakdown",
       "Priority processing",
       "Shareable result links",
