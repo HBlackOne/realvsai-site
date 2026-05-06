@@ -115,8 +115,11 @@ export const EARLY_ACCESS_PLANS = [
     highlight: false,
   },
   {
-    title: "Pro — Early Access",
+    title: "Pro",
     price: "$9.99 / month",
+    normalPriceCents: 1499,
+    earlyAccessPriceCents: 999,
+    discountLabel: "Early Access discount",
     credits: "700 credits / month",
     features: [
       "Image scans: 2 credits",

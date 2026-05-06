@@ -212,7 +212,19 @@ export function EarlyAccessPlansGrid() {
             </div>
             <div>
               <h3 className="text-base font-semibold">{plan.title}</h3>
-              <p className="mt-1 text-sm text-text-muted">{plan.price}</p>
+              {"earlyAccessPriceCents" in plan && "normalPriceCents" in plan ? (
+                <div className="mt-1">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-sm font-semibold text-primary">${(plan.earlyAccessPriceCents / 100).toFixed(2)} / month</span>
+                    <span className="text-xs text-text-muted line-through">${(plan.normalPriceCents / 100).toFixed(2)}</span>
+                  </div>
+                  <span className="mt-1 inline-flex rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">
+                    {plan.discountLabel}
+                  </span>
+                </div>
+              ) : (
+                <p className="mt-1 text-sm text-text-muted">{plan.price}</p>
+              )}
             </div>
           </div>
 
